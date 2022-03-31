@@ -88,6 +88,10 @@ div{
     font-size: 10px;
 }
 
+.forget:hover{
+    text-decoration: underline;
+}
+
 .boton{
     width: 30%;
     margin: 5em 0em;
@@ -95,6 +99,16 @@ div{
 
 .imagenflecha{
     width: 50%;
+}
+
+.crear{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+}
+
+.crear:hover{
+    text-decoration: underline;
 }
 
 

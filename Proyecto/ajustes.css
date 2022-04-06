@@ -83,6 +83,11 @@ div{
     padding: 1em;
 }
 
+.botonmenu:hover{
+    color: black;
+}
+
+
 /*Web*/ @media(min-width: 780px){
 
     .logo{

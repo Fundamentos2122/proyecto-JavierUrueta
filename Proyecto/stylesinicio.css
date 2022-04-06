@@ -83,6 +83,10 @@ div{
     padding: 1em;
 }
 
+.botonmenu:hover{
+    color: black;
+}
+
 .contenido{
     display: flex;
     padding: 1em 0em;
@@ -185,10 +189,6 @@ div{
         font-size: 1.5em;
     }
 
-    .table{
-
-    }
-
     .dia{
         width: 20%;
         font-size: 2em;
@@ -196,10 +196,6 @@ div{
 
     .tipoclase{
         font-size: 2em;
-    }
-
-    .seccioninstructores{
-        
     }
 
     .tabla{

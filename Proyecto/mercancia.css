@@ -83,6 +83,11 @@ div{
     padding: 1em;
 }
 
+.botonmenu:hover{
+    color: black;
+}
+
+
 .contenido{
     display: flex;
     flex-direction: column;
@@ -93,6 +98,7 @@ div{
 .productos{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin-top: 1em;
     
 }
@@ -101,10 +107,17 @@ div{
     display: flex;
     flex-direction: column;
     width: 20%;
+    gap: 0.5em;
 }
 
 .name{
     text-align: center;
+}
+
+.elige{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .barrabaja{

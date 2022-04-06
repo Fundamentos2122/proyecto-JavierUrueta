@@ -83,6 +83,48 @@ div{
     padding: 1em;
 }
 
+.botonmenu:hover{
+    color: black;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    border: solid black 1px;
+    padding: 2em;
+}
+
+.producto{
+    width: 35%;
+    text-align: center;
+}
+
+.cantidad{
+    width: 35%;
+    text-align: center;
+}
+
+.pagar{
+    width: 30%;
+    text-align: center;
+}
+.total{
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    background-color: #c5e094;
+    padding: 1em;
+    text-align: center;
+}
+
+.propagar{
+    align-content: center;
+}
+
+
+
 /*Web*/ @media(min-width: 780px){
 
     .logo{
@@ -108,5 +150,18 @@ div{
 
     .menu{
         font-size: 1.5em;
+    }
+
+    .card{
+        font-size: 1.5em;
+    }
+
+    .total{
+        padding: 2em;
+        font-size: 1.5em;
+    }
+
+    .propagar{
+        padding: 1em 2em;
     }
 }

@@ -45,12 +45,28 @@ div{
     text-align: justify;
 }
 
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 2em;
+}
+
 .ingresar{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    border: solid black 1px;
+    border-radius: 1em;
+    margin: 1em;
 }
+
+.ingresar:hover{
+    background-color:#c5e094;
+}
+
+
 
 .tittle{
     padding: 1em 0em;
@@ -105,6 +121,7 @@ div{
     text-decoration: none;
     color: #595858;
     font-size: 1.5em;
+    text-align: center;
 }
 
 .crear:hover{
@@ -124,6 +141,10 @@ div{
         width: 90%;
         text-align: center;
         font-size: 4em;
+    }
+
+    .flex{
+        flex-direction: row;
     }
 
     .boton{

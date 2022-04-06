@@ -63,8 +63,8 @@ div{
 .bder{
     width: 30%;
     padding: 5px;
-    background-color: transparent;
     border: white solid 1px;
+    background-color: transparent;
 }
 
 .menu{
@@ -74,7 +74,7 @@ div{
     align-items: center;   
     padding: 1em;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .botonmenu{
@@ -87,46 +87,32 @@ div{
     color: black;
 }
 
-
-.contenido{
-    display: flex;
-    flex-direction: column;
-    padding: 1em 0em;
-
-}
-
-.productos{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1em;
-    
-}
-
 .card{
     display: flex;
-    flex-direction: column;
-    width: 20%;
+
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    border: solid black 1px;
 }
 
 .name{
-    text-align: center;
+    width: 30%;
+    padding: 0em 1em;
 }
 
-.barrabaja{
-    display: flex;
+.lista{
+    list-style: none;
+    width: 40%;
 }
 
-.add{
-    background-color: #c5e094;
+.pagar{
+    width: 20%;
 }
 
-.cantidad{
-    display: flex;
-    justify-content: space-between;
-    border: solid black 1px;
-    width: 70%;
+.pagado{
+    width: 10%;
 }
-
 
 /*Web*/ @media(min-width: 780px){
 
@@ -154,12 +140,5 @@ div{
     .menu{
         font-size: 1.5em;
     }
-
-    .card{
-       width:10% ; 
-    }
-
-    .cantidad{
-        width: 90%;
-    }
+    
 }

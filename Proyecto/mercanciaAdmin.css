@@ -87,6 +87,61 @@ div{
     color: black;
 }
 
+.add{
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.add:hover{
+    background-color: #a3cd3b;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.name{
+    text-align: center;
+    background-color: #acabab;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    justify-content: space-around;
+    border-bottom: black solid 1px;
+    align-items: center;
+    align-content: center;
+}
+
+.producto{
+    margin-left: 1em;
+}
+
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.delete{
+    margin-right: 1em;
+    width: 3em;
+    height: 3em;
+}
+
+.delete:hover{
+    background-color: red;
+}
+
 /*Web*/ @media(min-width: 780px){
 
     .logo{
@@ -114,4 +169,22 @@ div{
         font-size: 1.5em;
     }
     
+    .producto{
+        width: 5%;
+    }
+
+    .name{
+        font-size: 1.5em;
+    }
+
+    .delete{
+        width: 5em;
+        height: 5em;
+    }
+
+    .add{
+        padding: 1em;
+        margin-left: 2em;
+        border-radius: 20px;
+    }
 }

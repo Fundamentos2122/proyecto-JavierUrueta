@@ -104,9 +104,13 @@ div{
     display: flex;
     margin: 1em 5em;
     padding: 2em 3em;
-    background-color: var(--grisclaro);
+    background-color: var(--verdeclaro);
     border: black solid;
     justify-content: center;
+}
+
+.reagendar:hover{
+    background-color: var(--verdefuerte);
 }
 
 
@@ -148,5 +152,6 @@ div{
     .reagendar{
         margin: 5em;
     }
+    
 
 }

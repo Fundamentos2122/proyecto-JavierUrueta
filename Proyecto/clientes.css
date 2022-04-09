@@ -87,6 +87,32 @@ div{
     color: black;
 }
 
+tr,td,th{
+    border: solid black 1px;
+}
+
+.info{
+    border-collapse: collapse;
+    border: solid 1px black;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.arriba{
+    background-color: #acabab;
+    text-align: center;
+}
+
+.cliente{
+    text-align: center;
+}
+
+
+
+.delete:hover{
+    background-color: red;
+}
+
 /*Web*/ @media(min-width: 780px){
 
     .logo{
@@ -113,5 +139,16 @@ div{
     .menu{
         font-size: 1.5em;
     }
+
+    .info{
+        font-size: 1.5em;
+    }
+
+    .boton{
+        width: 10%;
+    }
     
+    .delete{
+        width: 50%;
+    }
 }

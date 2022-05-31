@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'PublicSans';
+    src: url('../fuentes/PublicSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('../fuentes/GreatVibes-Regular.ttf');
+}
+
+:root {
+    --verdefuerte: #a3cd3b;
+    --verdeclaro: #c5e094;
+    --grisclaro: #acabab;
+    --grisfuerte: #595858;
+}
+
+html,
+body,
+img,
+p,
+span,
+div{
+    margin: 0;
+}
+
+*{
+    font-family: 'PublicSans';
+}
+
+.barrasuperior{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 20%;
+    height: 10%;
+}
+
+.lema{
+    display: flex;
+    width: 70%;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'GreatVibes';
+    text-align: center;
+    justify-content: center;
+}
+
+.iconosderecha{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+}
+
+.imagensalir{
+    width: 200%;
+}
+
+.bder{
+    width: 30%;
+    padding: 5px;
+    background-color: transparent;
+    border: white solid 1px;
+}
+
+.menu{
+    display: flex;
+    font-size: 0.8em;
+    background-color: #a3cd3b;
+    align-items: center;   
+    padding: 1em;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.botonmenu{
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+}
+
+.botonmenu:hover{
+    color: black;
+}
+
+
+.contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    flex-direction: column;
+}
+
+.calendario{
+    width: 90%;
+}
+
+.reagendar{
+    display: flex;
+    margin: 1em 5em;
+    padding: 2em 3em;
+    background-color: var(--verdeclaro);
+    border: black solid;
+    justify-content: center;
+}
+
+.reagendar:hover{
+    background-color: var(--verdefuerte);
+}
+
+
+/*Web*/ @media(min-width: 780px){ 
+
+    .logo{
+        width: 10%;
+    }
+
+    .lema{
+        display: flex;
+        justify-content: center;
+        font-size: 3.5em;
+        width: 80%;
+        text-align: center;
+    }
+
+    .bder{
+        width: 25%;
+        padding: 2em;
+    }
+
+    .iconosderecha{
+        width: 20%;
+    }
+
+    .menu{
+        font-size: 1.5em;
+    }
+
+    .contenido{
+        flex-direction: row;
+    }
+
+    .calendario{
+        width: 60%;
+    }
+
+    .reagendar{
+        margin: 5em;
+    }
+    
+
+}

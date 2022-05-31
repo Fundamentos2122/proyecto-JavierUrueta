@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'PublicSans';
-    src: url('PublicSans-VariableFont_wght.ttf');
+    src: url('../fuentes/PublicSans-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'GreatVibes';
-    src: url('GreatVibes-Regular.ttf');
+    src: url('../fuentes/GreatVibes-Regular.ttf');
 }
 
 :root {
@@ -45,7 +45,7 @@ div{
     text-align: justify;
 }
 
-.form{
+.formo{
     width: 450px;
     padding: 30px;
     margin: auto;
@@ -88,6 +88,8 @@ div{
 }
 /*--BOTON-DE-REGISTRARSE---------*/
 .crear{
+    display: flex;
+    justify-content: center;
     width: 100%;
     padding: 15px;
     border-radius: 2px;

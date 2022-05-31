@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'PublicSans';
-    src: url('PublicSans-VariableFont_wght.ttf');
+    src: url('../fuentes/PublicSans-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'GreatVibes';
-    src: url('GreatVibes-Regular.ttf');
+    src: url('../fuentes/GreatVibes-Regular.ttf');
 }
 
 :root {
@@ -63,18 +63,19 @@ div{
 .bder{
     width: 30%;
     padding: 5px;
-    background-color: transparent;
     border: white solid 1px;
+    background-color: transparent;
 }
 
 .menu{
     display: flex;
-    font-size: 0.8em;
+    font-size: 1em;
     background-color: #a3cd3b;
     align-items: center;   
     padding: 1em;
     text-align: center;
-    justify-content: space-between;
+    gap: 1em;
+    justify-content: center;
 }
 
 .botonmenu{
@@ -87,53 +88,28 @@ div{
     color: black;
 }
 
-
-.contenido{
-    display: flex;
-    flex-direction: column;
-    padding: 1em 0em;
-
-}
-
-.productos{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 1em;
-    
-}
-
-.card{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    gap: 0.5em;
-}
-
-.name{
+.tittle{
     text-align: center;
+    padding: 1em;
+    font-size: 1.5em;
 }
 
-.elige{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+.listHora{
+    list-style: circle;
 }
 
-.barrabaja{
-    display: flex;
-}
-
-.add{
+.hora{
     background-color: #c5e094;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.5em;
 }
 
-.cantidad{
-    display: flex;
-    justify-content: space-between;
-    border: solid black 1px;
-    width: 70%;
+.cliente{
+    font-size: 1.1em;
 }
+
 
 
 /*Web*/ @media(min-width: 780px){
@@ -161,13 +137,22 @@ div{
 
     .menu{
         font-size: 1.5em;
+        gap: 2em;
     }
 
-    .card{
-       width:10% ; 
+    .hora{
+        font-size: 1.8em;
     }
 
-    .cantidad{
-        width: 90%;
+    .listHora{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .cliente{
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+    
 }

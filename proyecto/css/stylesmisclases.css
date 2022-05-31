@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'PublicSans';
-    src: url('PublicSans-VariableFont_wght.ttf');
+    src: url('../fuentes/PublicSans-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'GreatVibes';
-    src: url('GreatVibes-Regular.ttf');
+    src: url('../fuentes/GreatVibes-Regular.ttf');
 }
 
 :root {
@@ -63,19 +63,18 @@ div{
 .bder{
     width: 30%;
     padding: 5px;
-    border: white solid 1px;
     background-color: transparent;
+    border: white solid 1px;
 }
 
 .menu{
     display: flex;
-    font-size: 1em;
+    font-size: 0.8em;
     background-color: #a3cd3b;
     align-items: center;   
     padding: 1em;
     text-align: center;
-    gap: 1em;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .botonmenu{
@@ -88,31 +87,34 @@ div{
     color: black;
 }
 
-.tittle{
-    text-align: center;
+
+.contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1em;
-    font-size: 1.5em;
+    flex-direction: column;
 }
 
-.listHora{
-    list-style: circle;
+.calendario{
+    width: 90%;
 }
 
-.hora{
-    background-color: #c5e094;
-    width: 100%;
-    text-align: center;
-    font-size: 1.2em;
-    padding: 0.5em;
+.reagendar{
+    display: flex;
+    margin: 1em 5em;
+    padding: 2em 3em;
+    background-color: var(--verdeclaro);
+    border: black solid;
+    justify-content: center;
 }
 
-.cliente{
-    font-size: 1.1em;
+.reagendar:hover{
+    background-color: var(--verdefuerte);
 }
 
 
-
-/*Web*/ @media(min-width: 780px){
+/*Web*/ @media(min-width: 780px){ 
 
     .logo{
         width: 10%;
@@ -137,22 +139,19 @@ div{
 
     .menu{
         font-size: 1.5em;
-        gap: 2em;
     }
 
-    .hora{
-        font-size: 1.8em;
+    .contenido{
+        flex-direction: row;
     }
 
-    .listHora{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .calendario{
+        width: 60%;
     }
 
-    .cliente{
-        font-size: 1.5em;
-        padding: 0.5em;
+    .reagendar{
+        margin: 5em;
     }
     
+
 }

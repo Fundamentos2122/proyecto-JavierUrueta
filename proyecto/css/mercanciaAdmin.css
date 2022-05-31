@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'PublicSans';
-    src: url('PublicSans-VariableFont_wght.ttf');
+    src: url('../fuentes/PublicSans-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'GreatVibes';
-    src: url('GreatVibes-Regular.ttf');
+    src: url('../fuentes/GreatVibes-Regular.ttf');
 }
 
 :root {
@@ -87,6 +87,13 @@ div{
     color: black;
 }
 
+.agregar{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+
 .add{
     margin: 1em;
     border-radius: 10px;
@@ -123,6 +130,7 @@ div{
 
 .producto{
     margin-left: 1em;
+    width: 25%;
 }
 
 
@@ -140,6 +148,71 @@ div{
 
 .delete:hover{
     background-color: red;
+}
+
+.edit{
+    margin-right: 1em;
+    width: 3em;
+    height: 3em;
+}
+
+.edit:hover{
+    background-color: gray;
+}
+
+.modal {
+    display: none;
+    z-index: 1050;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-x: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: display ease 1000ms;
+    -webkit-transition: display ease 1000ms;
+}
+
+.modal-dialog {
+    width: 500px;
+    margin-inline: auto;
+    margin-block: 2em;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity ease 1000ms;
+    -webkit-transition: opacity ease 1000ms;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    padding: 1em;
+}
+
+.modal-header {
+    border-bottom: 1px solid lightgray;
+}
+
+.modal-footer {
+    border-top: 1px solid lightgray;
+}
+
+.modal-header > * {
+    margin: 0;
+}
+
+.show {
+    display: block;
 }
 
 /*Web*/ @media(min-width: 780px){
@@ -181,6 +254,12 @@ div{
         width: 5em;
         height: 5em;
     }
+
+    .edit{
+        width: 5em;
+        height: 5em;
+    }
+
 
     .add{
         padding: 1em;

@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="loginAdmin.css">
+    <link rel="stylesheet" href="../css/loginAdmin.css">
 </head>
 <body>
     <div class="barrasuperior">
-        <img class="logo" src="LogoPilates.PNG" alt="LogoPilates">
+        <img class="logo" src="../imagenes/LogoPilates.PNG" alt="LogoPilates">
         <span class="lema">“Un estilo de vida para verte bien y sentirte mejor”</span>
     </div>
     <div class="flex">
@@ -21,7 +21,7 @@
                      <input class="ingdatos" type="text" name="password" placeholder="Contraseña">
                  </div>
             </div>
-             <button class="boton" name="ing" type="button" role="link" onclick="window.location='inicioAdmin.html'"><img class="imagenflecha" src="flecha.png">
+             <button class="boton" name="ing" type="button" role="link" onclick="window.location='inicioAdmin.php'"><img class="imagenflecha" src="../imagenes/flecha.png">
              </button>
              <br>
          </div>
@@ -33,12 +33,12 @@
                       <input class="ingdatos" type="text" name="password" placeholder="Contraseña">
                   </div>
              </div>
-              <button class="boton" name="ing" type="button" role="link" onclick="window.location='inicioInstructor.html'"><img class="imagenflecha" src="flecha.png">
+              <button class="boton" name="ing" type="button" role="link" onclick="window.location='inicioInstructor.php'"><img class="imagenflecha" src="../imagenes/flecha.png">
               </button>
               <br>
          </div>
     </div>
-    <div><a class="crear" href="Login.html">No soy admin</a></div>
+    <div><a class="crear" href="index.php">No soy admin</a></div>
 
 
 </body>

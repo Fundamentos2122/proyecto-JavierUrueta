@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'PublicSans';
-    src: url('PublicSans-VariableFont_wght.ttf');
+    src: url('../fuentes/PublicSans-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'GreatVibes';
-    src: url('GreatVibes-Regular.ttf');
+    src: url('../fuentes/GreatVibes-Regular.ttf');
 }
 
 :root {
@@ -87,30 +87,31 @@ div{
     color: black;
 }
 
-tr,td,th{
+.card{
+    display: flex;
+
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
     border: solid black 1px;
 }
 
-.info{
-    border-collapse: collapse;
-    border: solid 1px black;
-    width: 100%;
-    margin-top: 1em;
+.name{
+    width: 30%;
+    padding: 0em 1em;
 }
 
-.arriba{
-    background-color: #acabab;
-    text-align: center;
+.lista{
+    list-style: none;
+    width: 40%;
 }
 
-.cliente{
-    text-align: center;
+.pagar{
+    width: 20%;
 }
 
-
-
-.delete:hover{
-    background-color: red;
+.pagado{
+    width: 10%;
 }
 
 /*Web*/ @media(min-width: 780px){
@@ -139,16 +140,5 @@ tr,td,th{
     .menu{
         font-size: 1.5em;
     }
-
-    .info{
-        font-size: 1.5em;
-    }
-
-    .boton{
-        width: 10%;
-    }
     
-    .delete{
-        width: 50%;
-    }
 }

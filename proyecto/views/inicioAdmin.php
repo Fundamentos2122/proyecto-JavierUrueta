@@ -5,26 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="inicioAdmin.css">
+    <link rel="stylesheet" href="../css/inicioAdmin.css">
 </head>
 <body>
-    <div class="barrasuperior">
-        <img class="logo" src="LogoPilates.PNG" alt="LogoPilates">
-
-        <div class="lema" >“Un estilo de vida para verte bien y sentirte mejor”</div>
-
-        <div class="iconosderecha">
-            <button class="bder" name="ing" type="button" role="link" onclick="window.location='login.html'"><img class="imagensalir" src="logout.png">
-        </div>
-    </div>
-
-    <div class="menu">
-        <span><a class="botonmenu" href="inicioAdmin.html"> Pedidos</a></span>
-        <span><a class="botonmenu" href="snacksAdmin.html"> Snacks</a></span>
-        <span><a class="botonmenu" href="mercanciaAdmin.html"> Souvenirs</a></span>
-        <span><a class="botonmenu" href="clientes.html"> Clientes</a></span>
-    </div>
-
+    <?php
+        include("layouts/headerAdmin.php");
+    ?>
     <div class="pedidos">
         <div class="card">
             <div class="name">Guadalupe Martinez Martinez</div>

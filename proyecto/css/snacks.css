@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'PublicSans';
-    src: url('PublicSans-VariableFont_wght.ttf');
+    src: url('../fuentes/PublicSans-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'GreatVibes';
-    src: url('GreatVibes-Regular.ttf');
+    src: url('../fuentes/GreatVibes-Regular.ttf');
 }
 
 :root {
@@ -63,8 +63,8 @@ div{
 .bder{
     width: 30%;
     padding: 5px;
-    border: white solid 1px;
     background-color: transparent;
+    border: white solid 1px;
 }
 
 .menu{
@@ -74,7 +74,7 @@ div{
     align-items: center;   
     padding: 1em;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .botonmenu{
@@ -87,32 +87,56 @@ div{
     color: black;
 }
 
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0em;
+
+}
+
+.productos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+    
+    
+}
+
 .card{
     display: flex;
-
-    align-items: center;
-    width: 100%;
-    justify-content: space-around;
-    border: solid black 1px;
+    flex-direction: column;
+    width: 20%;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    align-content: space-between ;
 }
 
 .name{
-    width: 30%;
-    padding: 0em 1em;
+    text-align: center;
+    width: 100%;
+    height: 2.5em;
 }
 
-.lista{
-    list-style: none;
-    width: 40%;
+.barrabaja{
+    display: flex;
+    bottom: 0;
+    margin-bottom: 0;
 }
 
-.pagar{
-    width: 20%;
+.add{
+    background-color: #c5e094;
 }
 
-.pagado{
-    width: 10%;
+.add:hover{
+    background-color:#f82525 ;
 }
+
+.cantidad{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
 
 /*Web*/ @media(min-width: 780px){
 
@@ -140,5 +164,12 @@ div{
     .menu{
         font-size: 1.5em;
     }
-    
+
+    .card{
+       width:10% ; 
+    }
+
+    .cantidad{
+        width: 90%;
+    }
 }

@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'PublicSans';
-    src: url('PublicSans-VariableFont_wght.ttf');
+    src: url('../fuentes/PublicSans-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'GreatVibes';
-    src: url('GreatVibes-Regular.ttf');
+    src: url('../fuentes/GreatVibes-Regular.ttf');
 }
 
 :root {
@@ -63,8 +63,8 @@ div{
 .bder{
     width: 30%;
     padding: 5px;
-    border: white solid 1px;
     background-color: transparent;
+    border: white solid 1px;
 }
 
 .menu{
@@ -74,7 +74,7 @@ div{
     align-items: center;   
     padding: 1em;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .botonmenu{
@@ -87,60 +87,58 @@ div{
     color: black;
 }
 
-.add{
-    margin: 1em;
-    border-radius: 10px;
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0em;
+
 }
 
-.add:hover{
-    background-color: #a3cd3b;
+.productos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
+    
 }
 
 .card{
     display: flex;
     flex-direction: column;
-    width: 100%;
-
+    width: 20%;
+    gap: 0.5em;
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .name{
     text-align: center;
-    background-color: #acabab;
-    width: 100%;
 }
 
-.content{
-    display: flex;
-    flex-direction: row;
+.elige{
     width: 100%;
-    margin-top: 1em;
-    padding-bottom: 1em;
+    display: flex;
     justify-content: space-around;
-    border-bottom: black solid 1px;
+}
+
+.barrabaja{
+    display: flex;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.add{
+    background-color: #c5e094;
+}
+
+.cantidad{
+    display: flex;
+    justify-content: center;
     align-items: center;
     align-content: center;
+    width: 70%;
 }
 
-.producto{
-    margin-left: 1em;
-}
-
-
-
-.info{
-    display: flex;
-    flex-direction: column;
-}
-
-.delete{
-    margin-right: 1em;
-    width: 3em;
-    height: 3em;
-}
-
-.delete:hover{
-    background-color: red;
-}
 
 /*Web*/ @media(min-width: 780px){
 
@@ -169,23 +167,11 @@ div{
         font-size: 1.5em;
     }
 
-    .producto{
-        width: 5%;
+    .card{
+       width:10% ; 
     }
 
-    .name{
-        font-size: 1.5em;
+    .cantidad{
+        width: 90%;
     }
-
-    .delete{
-        width: 5em;
-        height: 5em;
-    }
-
-    .add{
-        padding: 1em;
-        margin-left: 2em;
-        border-radius: 20px;
-    }
-    
 }

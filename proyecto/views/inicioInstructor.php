@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="inicioInst.css">
+    <link rel="stylesheet" href="../css/inicioInst.css">
 </head>
 <body>
 
     <div class="barrasuperior">
-        <img class="logo" src="LogoPilates.PNG" alt="LogoPilates">
+        <img class="logo" src="../imagenes/LogoPilates.PNG" alt="LogoPilates">
 
         <div class="lema" >“Un estilo de vida para verte bien y sentirte mejor”</div>
 
         <div class="iconosderecha">
-            <button class="bder" name="ing" type="button" role="link" onclick="window.location='login.html'"><img class="imagensalir" src="logout.png">
+            <button class="bder" name="ing" type="button" role="link" onclick="window.location='index.php'"><img class="imagensalir" src="../imagenes/logout.png">
         </div>
     </div>
 

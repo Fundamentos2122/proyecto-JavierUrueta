@@ -5,28 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylesinicio.css">
+    <link rel="stylesheet" href="../css/stylesinicio.css">
 </head>
 <body>
-    <div class="barrasuperior">
-        <img class="logo" src="LogoPilates.PNG" alt="LogoPilates">
-
-        <div class="lema" >“Un estilo de vida para verte bien y sentirte mejor”</div>
-
-        <div class="iconosderecha">
-            <button class="bder" name="ing" type="button" role="link" onclick="window.location='login.html'"><img class="imagensalir" src="logout.png">
-        </div>
-    </div>
-
-    <div class="menu">
-        <span><a class="botonmenu" href="inicio.html"> Inicio</a></span>
-        <span><a class="botonmenu" href="misclases.html"> Mis Clases</a></span>
-        <span><a class="botonmenu" href="snacks.html"> Snacks</a></span>
-        <span><a class="botonmenu" href="mercancia.html"> Souvenirs</a></span>
-       <!--<span><a class="botonmenu" href="ajustes.html"> Ajustes</a></span>--> 
-        <span><a class="botonmenu" href="carrito.html"> Carrito</a></span>
-    </div>
-
+    <?php
+        include("layouts/header.php");
+    ?>
     <div class="contenido">
         <table class="tabla">
             <caption>Clases de la semana</caption>
@@ -78,7 +62,7 @@
                 Es una disciplina que se basa en el desarrollo de los músculos internos que ayuda a mantener el equilibrio corporal y que da firmeza y fortalece la columna vertebral.
                 <br><br>
                 Por eso mismo, el pilates es un método que se suele utilizar para rehabilitación, curar el dolor de espalda o corregir la posición corporal. Además, su práctica cuando no se tienen molestias cervicales o lumbares ayuda a prevenir malas posturas y las consecuencias que puedan tener para la espalda. </p>
-            <img class="poses" src="Principios.JPG" alt="Principios">
+            <img class="poses" src="../imagenes/Principios.JPG" alt="Principios">
         </div>
     </div>
 

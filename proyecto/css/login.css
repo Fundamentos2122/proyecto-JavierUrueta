@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'PublicSans';
-    src: url('PublicSans-VariableFont_wght.ttf');
+    src: url('../fuentes/PublicSans-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'GreatVibes';
-    src: url('GreatVibes-Regular.ttf');
+    src: url('../fuentes/GreatVibes-Regular.ttf');
 }
 
 :root {
@@ -45,28 +45,12 @@ div{
     text-align: justify;
 }
 
-.flex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1em 2em;
-}
-
 .ingresar{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border: solid black 1px;
-    border-radius: 1em;
-    margin: 1em;
 }
-
-.ingresar:hover{
-    background-color:#c5e094;
-}
-
-
 
 .tittle{
     padding: 1em 0em;
@@ -109,7 +93,8 @@ div{
 }
 
 .boton{
-    width: 30%;
+    width: 100%;
+    height: 3em;
     margin: 5em 0em;
 }
 
@@ -121,7 +106,6 @@ div{
     text-decoration: none;
     color: #595858;
     font-size: 1.5em;
-    text-align: center;
 }
 
 .crear:hover{
@@ -143,12 +127,8 @@ div{
         font-size: 4em;
     }
 
-    .flex{
-        flex-direction: row;
-    }
-
     .boton{
-        width: 10%;
+        width: 100%;
         margin-top: 5em;
     }
     

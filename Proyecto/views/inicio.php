@@ -41,17 +41,14 @@
         </table>
 
         <div class="seccioninstructores">
-            <div class="tittle"><span>Instructoras</span></div>
-            <div class="maestras">
-                <div class="maestra">
-                    <img class="maestraimg" src="https://picsum.photos/200/200" alt="Maestra1">
-                    <div class="nombre"><span>Vale</span></div>
-                </div>
-                <div class="maestra">
-                    <img class="maestraimg" src="https://picsum.photos/200/200" alt="Maestra2">
-                    <div class="nombre"><span>Maria</span></div>
-                </div>
-            </div>
+            <div class="tittle"><h1 class="titulo">Agenda tus clases</h1></div>
+            <form class="formo" action="../controllers/usersController.php" method="POST" autocomplete="off">  
+              <input type="hidden" name="_method" value="PUT"> <!--PUT?-->
+              <input type="hidden" name="id" value="" id="form-edit-id">      
+              <input class="cajas" id="form-edit-text" name="semana" type="text" placeholder="Clases a la semana" required>
+              <input class="cajas" id="form-edit-cost" name="horaclase" type="text" placeholder="Hora de las clases" required>
+              <input class="add" type="submit" id="addClass" value="Agendar">
+            </form>
         </div>
     </div>
 

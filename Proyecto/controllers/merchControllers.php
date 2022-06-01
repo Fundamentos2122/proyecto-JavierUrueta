@@ -74,7 +74,7 @@ else if($_SERVER["REQUEST_METHOD"] === "POST"){
             postProduct($_POST["name"],$photo,$_POST["color"],$_POST["talla"],$_POST["cost"],true);
         }
         else if($_POST["_method"] === "PUT"){
-            putProduct($_POST["id"],$_POST["name"],$_POST["color"],$_POST["talla"],$_POST["cost"],true);
+            putProduct($_POST["id"],$_POST["name"],$_POST["color"],$_POST["talla"],$_POST["costo"],true);
         }
     }
     else if(array_key_exists("id",$_POST)){

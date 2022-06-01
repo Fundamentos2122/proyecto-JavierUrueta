@@ -4,9 +4,9 @@ const formTweet = document.getElementById("form-tweet");
 const modalTweet = document.getElementById("modalTweet");
 
 //Editar
-const idEdit = document.getElementById("form-edit-id");
-const textAreaEdit = document.getElementById("form-edit-text");
-const costEdit = document.getElementById("form-edit-cost");
+const idEdit = document.getElementById("form-edit-id"); //input saca id
+const textAreaEdit = document.getElementById("form-edit-text");//input saca nombre
+const costEdit = document.getElementById("form-edit-cost");//input saca costo
 const btnSaveEdit = document.getElementById("btnSaveEdit");
 
 //Delete
@@ -16,6 +16,17 @@ const idDelete = document.getElementById("form-delete-id");
 document.addEventListener("DOMContentLoaded", function() {
 
     getSnacks();
+    
+    let modals = document.getElementsByClassName("modal");
+
+    for(var i = 0; i < modals.length; i++) {
+        modals[i].addEventListener("click", function(e) {
+            if(e.target === this){
+                this.classList.remove("show");
+            }
+        });
+    }
+
 
 });
 

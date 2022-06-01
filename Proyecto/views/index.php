@@ -28,7 +28,7 @@
         <br>
         <div><a class="crear" href="registro.php"> Registrate</a></div>
         <br><br><br><br>
-        <div><a class="crear" href="loginAdmin.php">Soy admin</a></div>
+        <!--<div><a class="crear" href="loginAdmin.php">Soy admin</a></div>-->
     </div>
 
     <?php

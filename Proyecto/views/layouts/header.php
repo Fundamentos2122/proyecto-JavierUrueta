@@ -21,7 +21,7 @@
 
     <div class="menu">
         <span><a class="botonmenu" href="inicio.php"> Inicio</a></span>
-        <!--<span><a class="botonmenu" href="misclases.php"> Mis Clases</a></span>-->
+        <!--<span><a class="botonmenu" href="misclases.php"> Clases</a></span>-->
         <span><a class="botonmenu" href="snacks.php"> Snacks</a></span>
         <span><a class="botonmenu" href="mercancia.php"> Souvenirs</a></span>
        <!--<span><a class="botonmenu" href="ajustes.html"> Ajustes</a></span>--> 

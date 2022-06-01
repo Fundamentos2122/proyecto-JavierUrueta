@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $user;
 
             while($row = $query->fetch(PDO::FETCH_ASSOC)) {
-                $user = new User($row["id"], $row["usuario"], $row["password"], $row["tipo"]);
+                $user = new User($row["id"], $row["usuario"], $row["horaclase"], $row["semana"], $row["password"], $row["tipo"]);
             }
 
             if (!password_verify($password, $user->getPassword())) {
@@ -45,9 +45,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             $_SESSION["id"] = $user->getId();
             $_SESSION["username"] = $user->getUsername();
+            $_SESSION["horaclase"] = $user->getHoraclase();
+            $_SESSION["semana"] = $user->getSemana();
             $_SESSION["type"] = $user->getType();
 
-            header('Location: http://localhost/proyecto/views/inicio.php');
+            if($_SESSION["type"] === "admin"){
+                header('Location: http://localhost/proyecto/views/inicioAdmin.php');
+            }
+            else if($_SESSION["type"] === "normal"){
+                header('Location: http://localhost/proyecto/views/inicio.php');
+            }
+            else{
+                header('Location: http://localhost/proyecto/views/inicioInstructor.php');
+            }
+
+
+            //header('Location: http://localhost/proyecto/views/inicio.php');
             exit();
         }
         catch(PDOException $e) {

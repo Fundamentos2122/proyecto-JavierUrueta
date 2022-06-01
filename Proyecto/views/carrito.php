@@ -12,22 +12,11 @@
         include("layouts/header.php");
     ?>
     <div class="pedidos">
-        <div class="card">
-            <div class="producto">Jugo Verde</div>
-            <div class="cantidad">x1</div>
-            <div class="pagar"> $40</div>
-        </div>
-        <div class="card">
-            <div class="producto">Playera Hombre Negra Ch</div>
-            <div class="cantidad">x1</div>
-            <div class="pagar"> $100</div>
-        </div>
-        <div class="card">
-            <div class="producto">Playera Hombre Verde Ch</div>
-            <div class="cantidad">x1</div>
-            <div class="pagar"> $100</div>
-        </div>
+        <!--CARD-->
     </div>
-    <div class="total">Total: $240<button class="propagar">Pagar</button></div>
+    <div class="total" id="pagar">
+        <!--<button class="propagar">Pagar</button>-->
+    </div>
+    <script src="../js/script_cart.js"></script>
 </body>
 </html>

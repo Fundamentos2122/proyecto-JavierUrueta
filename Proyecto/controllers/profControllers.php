@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     else{
         //Obtener todos los registros
         try{
-            $query = $connection->prepare('SELECT * FROM usuarios WHERE tipo = "normal"');//Se le cambia el nombre ya sea photocard, cds, etc
+            $query = $connection->prepare('SELECT * FROM usuarios WHERE tipo = "profe"');//Se le cambia el nombre ya sea photocard, cds, etc
             $query->execute();
     
             $products = array();//Genera arreglo vacio
@@ -64,15 +64,14 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     
 }
 else if($_SERVER["REQUEST_METHOD"] === "POST"){
-    if(array_key_exists("_method",$_POST)){//Si se envia por formulario
+    if(array_key_exists("user",$_POST)){//Si se envia por formulario
         //Utilizar el arreglo $_POST
         if($_POST["_method"] === "POST"){
             //Registro nuevo
-            postProduct($_POST["user"],$_POST["password"],"normal",true);//future
+            postProduct($_POST["user"],$_POST["password"],"profe",true);//future
         }
         else if($_POST["_method"] === "PUT"){
-            session_start();
-            putProduct($_SESSION["username"],$_POST["horaclase"],$_POST["semana"],true);//future
+            putProduct($_POST["id"],$_POST["name"],$_POST["cost"],true);//future
         }
     }
     else if(array_key_exists("id",$_POST)){
@@ -99,7 +98,7 @@ function postProduct($user,$password,$tipo,$redirect){
         }
         else {
             if ($redirect) {
-                header('Location: http://localhost/proyecto/views/index.php');
+                header('Location: http://localhost/proyecto/views/clientes.php');
             }
             else {
                 echo "Registro guardado";
@@ -113,13 +112,13 @@ function postProduct($user,$password,$tipo,$redirect){
 
 }
 
-function putProduct($user,$horaclase,$semana,$redirect){
+function putProduct($id,$horaclase,$semana,$redirect){
     global $connection;
     try{
-        $query = $connection->prepare('UPDATE usuarios SET semana = :semana, horaclase = :horaclase WHERE usuario = :usuario');//Para actualizar es con una coma
-        $query->bindParam(':usuario', $user, PDO::PARAM_STR);
-        $query->bindParam(':semana', $semana, PDO::PARAM_STR);
-        $query->bindParam(':horaclase', $horaclase, PDO::PARAM_STR);
+        $query = $connection->prepare('UPDATE usuarios SET semana = :semana, horaclase = :horaclase WHERE id = :id');//Para actualizar es con una coma
+        $query->bindParam(':id', $id, PDO::PARAM_INT);
+        $query->bindParam(':semana', $horaclase, PDO::PARAM_STR);
+        $query->bindParam(':horaclase', $semana, PDO::PARAM_STR);
         $query->execute();
 
         if($query->rowCount() === 0) {
@@ -127,9 +126,7 @@ function putProduct($user,$horaclase,$semana,$redirect){
         }
         else {
             if ($redirect) {
-                echo '<script>alert("Clase agendada con exito! :D")</script>';
-                header('Location: http://localhost/proyecto/views/inicio.php');
-                
+                header('Location: http://localhost/proyecto/views/snacksAdmin.php');
             }
             else {
                 echo "Registro guardado";

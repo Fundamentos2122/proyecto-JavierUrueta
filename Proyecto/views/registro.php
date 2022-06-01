@@ -14,9 +14,10 @@
     </div>
     <div>
         <form class="formo" action="../controllers/usersController.php" method="POST" autocomplete="off">
+            <input type="hidden" name="_method" value="POST">
             <h1 class="titulo">Registrarse</h1>
-            <input class="cajas" name="user" type="text" placeholder="Usuario">
-            <input class="cajas" name="password" type="password" placeholder="Password">
+            <input class="cajas" name="user" type="text" placeholder="Usuario" required>
+            <input class="cajas" name="password" type="password" placeholder="Password" required>
 
             <br><br>
 

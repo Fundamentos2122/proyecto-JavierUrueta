@@ -19,6 +19,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     getMerch();
 
+    let modals = document.getElementsByClassName("modal");
+
+    for(var i = 0; i < modals.length; i++) {
+        modals[i].addEventListener("click", function(e) {
+            if(e.target === this){
+                this.classList.remove("show");
+            }
+        });
+    }
+
 });
 
 function paintMerch(list) {

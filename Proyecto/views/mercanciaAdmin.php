@@ -15,11 +15,11 @@
 
     <form class="agregar"  id="form-merch" action="../controllers/merchControllers.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_method" value="POST">
-        <input class="ingdatos" type="text" name="name" id="merch-Name" placeholder="Nombre de la Mercancia">
-        <input class="ingdatos" type="text" name="cost" id="merch-Precio" placeholder="Precio" >
-        <input class="ingdatos" type="text" name="color" id="merch-Color" placeholder="Color" >
-        <input class="ingdatos" type="text" name="talla" id="merch-Talla" placeholder="Talla" >
-        <input class="ingdatos" type="file" name="imagen" id="merch-Imagen" accept=".jpg,.gif,.png" >
+        <input class="ingdatos" type="text" name="name" id="merch-Name" placeholder="Nombre de la Mercancia" required>
+        <input class="ingdatos" type="text" name="cost" id="merch-Precio" placeholder="Precio"  required>
+        <input class="ingdatos" type="text" name="color" id="merch-Color" placeholder="Color" required>
+        <input class="ingdatos" type="text" name="talla" id="merch-Talla" placeholder="Talla" required>
+        <input class="ingdatos" type="file" name="imagen" id="merch-Imagen" accept=".jpg,.gif,.png" required>
         <input class="add" type="submit" id="addPrdct" value="Agregar">
     </form>
     <div id="merchList">

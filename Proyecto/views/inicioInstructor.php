@@ -26,25 +26,14 @@
             document.write(date);
         </script>
     </div>
-    <div class="lista">
-        <div class="hora">07:00 am</div>
-        <ol class="listHora">
+    <div class="lista" id="lista">
+        <!--<ol class="listHora">
             <li class="cliente">Juana Ramos de la Paz</li>
             <li class="cliente">Rita Martinez Martinez</li>
-        </ol>
-        <div class="hora">08:00 am</div>
-        <ol class="listHora">
-            <li class="cliente">Juana Ramos de la Paz</li>
-            <li class="cliente">Rita Martinez Martinez</li>
-            <li class="cliente">Facundo Torres Miranda</li>
-        </ol>
-        <div class="hora">09:00 am</div>
-        <ol class="listHora">
-            <li class="cliente">Juana Ramos de la Paz</li>
-            <li class="cliente">Rita Martinez Martinez</li>
-            <li class="cliente">Bad Bunny</li>
-        </ol>
+        </ol>-->
     </div>
+
+    <script src="../js/script_profList.js"></script>
 
 </body>
 </html>

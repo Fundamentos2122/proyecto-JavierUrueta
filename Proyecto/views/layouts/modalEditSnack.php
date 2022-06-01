@@ -8,8 +8,10 @@
                 <form action="../controllers/snacksControllers.php" method="POST">
                     <input type="hidden" name="_method" value="PUT">
                     <input type="hidden" name="id" value="" id="form-edit-id">
-                    <textarea id="form-edit-text" name="name"></textarea>
-                    <textarea id="form-edit-cost" name="cost"></textarea>
+                    <!--<label for="name">Nombre del Snack</label>-->
+                    <textarea id="form-edit-text" name="name" required></textarea>
+                    <!--<label for="cost">Precio</label>-->
+                    <textarea id="form-edit-cost" name="cost" required></textarea>
                     <input type="submit" value="Guardar">
                 </form>
             </div>

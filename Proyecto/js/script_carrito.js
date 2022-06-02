@@ -5,18 +5,15 @@ const cartList = "cartList";
 const keyPrice = "keyPrice";
 const price = "price";
 
-const cart = document.getElementById("list-products");
+const cart = document.getElementsByClassName("pedidos")[0];
 const btncheckout = document.getElementById("btncheckout");
 const checkout = document.getElementById("checkout");
 
 var band = 0; //Bandera para el menú
 var total = 0;
 
-window.addEventListener("resize",ventana);
-
 document.addEventListener("DOMContentLoaded", function(){
     //Agregar evento al formulario
-    boton.addEventListener("click",despliega_menu);
     paintCart();
     paintPrice();
 });
@@ -24,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function paintCart(){
     let list = getCart();
-
+    console.log(list);
     let html = '';
 
     for(var i = 0; i < list.length; i++){
@@ -33,35 +30,38 @@ function paintCart(){
         html += 
         `<div class="card" id="${list[i].id}">
             <div class="producto">${list[i].name}</div>
-            <div class="pagar"> $${list[i].costo}</div>
+            <div class="pagar"> ${list[i].precio}</div>
             <button class="delete-product" onclick="deleteProduct(${list[i].id})">Eliminar producto</button>
         </div>`;
-        acum=parseFloat(list[i].costo);
+        acum=parseFloat(list[i].precio);
         total+=acum;
     }
+    console.log(total);
 
     cart.innerHTML = html;
-    pagar.innerHTML =  `Total: $${total}<button class="propagar">Crear Pedido</button>`;
+    pagar.innerHTML =  `Total: $${total}<button class="propagar" id="btnSend" onclick="envio()">Crear Pedido</button>`;
 }
 
 function paintPrice(){
-    var precio = document.createElement("h3");
-    var text = document.createTextNode("TOTAL = $"+total);
-    precio.classList.add("subtotal");
-    precio.appendChild(text);
-    checkout.insertBefore(precio,btncheckout);
+    // var precio = document.createElement("h3");
+    // var text = document.createTextNode("TOTAL = $"+total);
+    // precio.classList.add("subtotal");
+    // precio.appendChild(text);
+    // checkout.insertBefore(precio,btncheckout);
 
     let totalprice = total;
     localStorage.setItem(keyPrice,JSON.stringify(totalprice));
-    if(total === 0){
-        document.getElementById("btncheckout").style.display = "none";
-    }
+    // document.location.reload(true);
+    // if(total === 0){
+    //     document.getElementById("btncheckout").style.display = "none";
+    // }
 }
 
 function updatePrice(){
-    let price = document.getElementsByClassName("subtotal")[0];
+    let price = document.getElementsByClassName("total")[0];
     price.remove();
-    paintPrice();
+    // paintPrice();
+    document.location.reload(true);
 }
 
 function getCart(){
@@ -103,6 +103,7 @@ function deleteProduct(id){
         acum+=parseFloat(list[i].precio);
         total=acum;
     }
+    console.log(total);
     updatePrice();
     // tweet.remove();
     // console.log("Eliminando " + id);

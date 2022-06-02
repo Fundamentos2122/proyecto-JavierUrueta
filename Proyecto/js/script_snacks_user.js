@@ -16,17 +16,17 @@ function paintSnacks(list) {
     for(var i = 0; i < list.length; i++) {
 
         html += 
-        `<div class="card" id="${list[i].id}">
+        `<form class="card" id="${list[i].id}">
             <span class="name">${list[i].name}</span>
-            <p class="name" id="costo">$${list[i].costo}</p>
+            <p class="name2">${list[i].costo}</p>
             <img class="producto" src="data:image/jpg;base64,${list[i].imagen}">
             <div class="barrabaja">
                 <div class="cantidad">
                     <p>Agregar al carrito</p>   
                 </div>
-                <button class="add" type="button">✔</button> 
+                <button class="add">✔</button> 
             </div>
-        </div>`;
+        </form>`;
     }
 
     
@@ -76,7 +76,7 @@ function submitProduct(e){
     //let imagen;
     // const hijos = this.children;
     name = this.getElementsByClassName("name")[0];
-    cost = this.getElementsById("costo");
+    cost = this.getElementsByClassName("name2")[0];
     //imagen = this.getElementsByClassName("producto")[0];
 
     let product = {

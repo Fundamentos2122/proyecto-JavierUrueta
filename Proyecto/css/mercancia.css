@@ -115,6 +115,22 @@ div{
     text-align: center;
 }
 
+.name2{
+    text-align: center;
+}
+
+.name3{
+    text-align: center;
+}
+
+.name4{
+    text-align: center;
+}
+
+.name4::before{
+    content: "$";
+}
+
 .elige{
     width: 100%;
     display: flex;
@@ -129,6 +145,10 @@ div{
 
 .add{
     background-color: #c5e094;
+}
+
+.add:hover{
+    background-color:#005721 ;
 }
 
 .cantidad{

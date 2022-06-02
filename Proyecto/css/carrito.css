@@ -110,6 +110,9 @@ div{
     width: 30%;
     text-align: center;
 }
+.pagar::before{
+    content: "$";
+}
 .total{
     display: flex;
     justify-content: center;

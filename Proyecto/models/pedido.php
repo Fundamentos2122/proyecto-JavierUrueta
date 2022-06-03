@@ -3,13 +3,15 @@
 class Pedido{
 
     private $_id;
-    private $_name;
+    private $_name;//usuario
+    private $_producto;
     private $_costo;
     private $_active;
 
-    public function __construct($id, $name, $costo, $active){
+    public function __construct($id, $name, $producto, $costo, $active){
         $this->setId($id);
         $this->setName($name);
+        $this->setProducto($producto);
         $this->setCosto($costo);
         $this->setActive($active);
     }
@@ -28,7 +30,15 @@ class Pedido{
 
     public function setName($name) {
         $this->_name = $name;
-    }     
+    }  
+    
+    public function getProducto() {
+        return $this->_producto;
+    }
+
+    public function setProducto($producto) {
+        $this->_producto = $producto;
+    }
 
     public function getCosto() {
         return $this->_costo;
@@ -51,6 +61,7 @@ class Pedido{
 
         $array["id"] = $this->getId();
         $array["name"] = $this->getName();
+        $array["producto"] = $this->getProducto();
         $array["costo"] = $this->getCosto();
         $array["active"] = $this->getActive();
 

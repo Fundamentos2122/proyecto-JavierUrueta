@@ -9,8 +9,10 @@
                     <input type="hidden" name="_method" value="PUT">
                     <input type="hidden" name="id" value="" id="form-edit-id">
                     <!--<label for="name">Nombre del Snack</label>-->
+                    <label><small>Nombre</small></label>
                     <textarea id="form-edit-text" name="name" required></textarea>
                     <!--<label for="cost">Precio</label>-->
+                    <label><small>Precio</small></label>
                     <textarea id="form-edit-cost" name="cost" required></textarea>
                     <input type="submit" value="Guardar">
                 </form>

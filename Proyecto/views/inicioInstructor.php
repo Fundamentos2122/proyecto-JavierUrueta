@@ -20,11 +20,11 @@
     </div>
 
     <div class="menu">
-        <span>Clases de Hoy </span>
-        <script>
+        <span>Alumnos </span>
+        <!--<script>
             date = new Date().toLocaleDateString();
             document.write(date);
-        </script>
+        </script>-->
     </div>
     <div class="lista" id="lista">
         <!--<ol class="listHora">

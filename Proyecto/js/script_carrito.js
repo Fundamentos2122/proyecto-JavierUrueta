@@ -42,7 +42,7 @@ function paintCart(){
     pagar.innerHTML =  `        <form action="../controllers/pedidoController.php" class="list-detail">
     <input type="hidden" name="_method" value="POST">
     <input id="json" type="hidden" name="array_json" value="">
-    </form>Total: $${total}<button class="propagar" id="btnSend" onclick="envio()">Crear Pedido</button>`;
+    </form><button class="propagar" id="btnSend" onclick="envio()">Crear Pedido</button>`;
 }
 
 function paintPrice(){

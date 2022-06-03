@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function paintSnacks(list) {
 
-    let listhtml = '';
-    let html = '';
+    //let listhtml = '';
+    //let html = '';
 
     var vari = 0;
     for(var i=0; i<list.length;i++)

@@ -50,6 +50,10 @@ div{
     justify-content: center;
 }
 
+.listHora{
+    border-bottom: solid black 1px;
+}
+
 .iconosderecha{
     display: flex;
     width: 20%;

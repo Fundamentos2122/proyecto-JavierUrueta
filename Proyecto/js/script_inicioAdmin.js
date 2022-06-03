@@ -1,6 +1,4 @@
-//PINTA LAS CITAS DE ESE USUARIO
-
-const snackList = document.getElementById("contenido");
+const snackList = document.getElementById("pedidos");
 
 const formTweet = document.getElementById("form-tweet");
 const modalTweet = document.getElementById("modalTweet");
@@ -32,20 +30,15 @@ function paintSnacks(list) {
     for(var i = 0; i < list.length; i++) {
 
         html += 
-        `<div class="card" id = "${list[i].id}">
-            <div class="content">
-                <div class="info">
-                    <p>Cita</p>
-                    <p>Fecha: ${list[i].fecha}</p>
-                    <p>Hora: ${list[i].hora}</p>
-                    <p>Profe: ${list[i].profe}</p>
-                </div>
-                <div class="options">
-                    <button class="btn-option" onclick="deleteSnack(${list[i].id})">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>         
-            </div>       
+        `<div class="card">
+            <div class="name">Cliente: ${list[i].name}</div>
+            <ol class="lista">
+            <li class="producto">Producto: ${list[i].producto}</li>
+            </ol>
+            <div class="pagar">Precio: $${list[i].costo}</div>
+            <button class="btn-option" onclick="deleteSnack(${list[i].id})">
+            <i class="fa-solid fa-xmark"></i>
+            </button>
         </div>`;
     }
 
@@ -56,7 +49,7 @@ function paintSnacks(list) {
 function getSnacks() {
     let xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", "../controllers/citasController.php", true);
+    xhttp.open("GET", "../controllers/pedidoController.php", true);
 
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4) {
@@ -87,29 +80,4 @@ function deleteSnack(id) {
     idDelete.value = id;
 
     modalDeleteTweet.classList.add("show");
-}
-
-function editSnack(id) {
-    let xhttp = new XMLHttpRequest();
-
-    xhttp.open("GET", "../controllers/snacksControllers.php?id=" + id, true);
-
-    xhttp.onreadystatechange = function() {
-        if (this.readyState === 4) {
-            if (this.status === 200) {
-                let tweet = JSON.parse(this.responseText);
-                console.log(this.responseText);
-                idEdit.value = tweet.id;
-                textAreaEdit.value = tweet.name;
-                costEdit.value = tweet.costo;
-
-                modalTweet.classList.add("show");
-            }
-            else {
-                console.log("Error");
-            }
-        }
-    };
-
-    xhttp.send();
 }

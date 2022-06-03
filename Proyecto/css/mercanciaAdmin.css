@@ -200,6 +200,12 @@ div{
     opacity: 1;
 }
 
+.modal-body
+{
+    display: flex;
+    justify-content:space-between ;
+}
+
 .modal-header, .modal-body, .modal-footer {
     padding: 1em;
 }

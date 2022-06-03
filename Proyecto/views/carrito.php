@@ -56,7 +56,7 @@
         xhttp.send(list);
 
         localStorage.clear();
-        // location.replace('http://localhost/Proyecto/views/carrito.php');
+        location.replace('http://localhost/Proyecto/views/carrito.php');
     }
         // console.log(document.getElementById("json").value);
     </script>

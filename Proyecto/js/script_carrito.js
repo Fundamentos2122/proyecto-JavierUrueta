@@ -4,7 +4,7 @@ const pagar = document.getElementsByClassName("total")[0];
 const cartList = "cartList";
 const keyPrice = "keyPrice";
 const price = "price";
-
+//guardado:)
 const cart = document.getElementsByClassName("pedidos")[0];
 const btncheckout = document.getElementById("btncheckout");
 const checkout = document.getElementById("checkout");
@@ -39,7 +39,10 @@ function paintCart(){
     console.log(total);
 
     cart.innerHTML = html;
-    pagar.innerHTML =  `Total: $${total}<button class="propagar" id="btnSend" onclick="envio()">Crear Pedido</button>`;
+    pagar.innerHTML =  `        <form action="../controllers/pedidoController.php" class="list-detail">
+    <input type="hidden" name="_method" value="POST">
+    <input id="json" type="hidden" name="array_json" value="">
+    </form>Total: $${total}<button class="propagar" id="btnSend" onclick="envio()">Crear Pedido</button>`;
 }
 
 function paintPrice(){

@@ -15,7 +15,7 @@
         <!--CARD-->
     </div>
     <div class="total" id="pagar">
-        <!--<button class="propagar">Pagar</button>-->
+
     </div>
     <script src="../js/script_carrito.js"></script>
 
@@ -23,7 +23,7 @@
         function envio(){
 
         let list = getJSON();
-        console.log(list);
+        //console.log(list);
 
         function getJSON(){
             let list2 = JSON.parse(localStorage.getItem("cartList"));
@@ -36,7 +36,7 @@
             for(var i = 0; i < list2.length; i++){
                 var myObj = {
                 
-                "name" : list2[i].titulo,    //your artist variable
+                "name" : list2[i].name,    //your artist variable
                 "total" : list2[i].precio   //your title variable
                 };
                 a.push(myObj);
@@ -46,16 +46,17 @@
         }
         }
         document.getElementById("json").value = list;
+        console.log(document.getElementById("json").value);
         let xhttp = new XMLHttpRequest();
 
-        xhttp.open("POST", "../controllers/detailController.php", true);
+        xhttp.open("POST", "../controllers/pedidoController.php", true);
 
         xhttp.setRequestHeader("Content-type", "application/json");
 
         xhttp.send(list);
 
         localStorage.clear();
-        location.replace('http://localhost/Proyecto/index.php');
+        // location.replace('http://localhost/Proyecto/views/carrito.php');
     }
         // console.log(document.getElementById("json").value);
     </script>

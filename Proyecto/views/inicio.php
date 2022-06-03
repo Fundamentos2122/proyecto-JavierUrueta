@@ -40,17 +40,24 @@
             </tr>         
         </table>
 
-        <div class="seccioninstructores">
-            <div class="tittle"><h1 class="titulo">Agenda tus clases</h1></div>
-            <form class="formo" action="../controllers/usersController.php" method="POST" autocomplete="off">  
-              <input type="hidden" name="_method" value="PUT"> <!--PUT?-->
-              <input type="hidden" name="id" value="" id="form-edit-id">      
-              <input class="cajas" id="form-edit-text" name="semana" type="text" placeholder="Clases a la semana" required>
-              <input class="cajas" id="form-edit-cost" name="horaclase" type="text" placeholder="Hora de las clases" required>
+        <div class="seccioninstructores" id="seccioninstructores">
+            <div class="tittle"><h1 class="titulo">Agenda tu cita</h1></div>
+
+            <br><br>
+            <form id="cita" class="formo" action="../controllers/citasController.php" method="POST" autocomplete="off">  
+              <label for="cars">Elige tu profesor:</label>
+              <select id="prof" name="profesor" required>
+                
+              </select>
+              <br><br>  
+              <input type="hidden" name="_method" value="POST">
+              <input type="hidden" name="id" value="" id="form-edit-id">
+              <input class="cajas" type="date" id="fecha" name="fecha" value="yyyy-MM-dd". min="2022-06-06" max="2022-12-31" required>
+              <input class="cajas" type="time" id="appt" name="hora" min="07:00" max="21:00" required>     
               <input class="add" type="submit" id="addClass" value="Agendar">
             </form>
         </div>
-    </div>
+      </div>
 
     <div class="contenido2">
         <span class="nuestrosprincipios">Nuestros Principios</span>
@@ -62,6 +69,8 @@
             <img class="poses" src="../imagenes/Principios.JPG" alt="Principios">
         </div>
     </div>
+
+    <script src="../js/script_listprof.js"></script>
 
 </body>
 </html>

@@ -173,3 +173,4 @@ function deleteProduct($id,$redirect){
         echo $e;
     }
 }
+?>
